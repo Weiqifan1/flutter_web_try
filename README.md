@@ -3,7 +3,17 @@
 
 tutorials:
 -*- non youtube:
+
+officiel men mest for mobile.
 https://flutter.dev/docs/reference/tutorials
+
+flutter web docs:
+https://flutter.dev/web
+
+enekl gennemgang for web, men uden de komponenter jeg skal bruge (men viser hover effekt)
+https://blog.codemagic.io/flutter-web-getting-started-with-responsive-design/
+
+
 
 -*- youtube tutorials
 god til atstarte med (nav bar, og knap uden funktion):
