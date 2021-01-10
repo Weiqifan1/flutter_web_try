@@ -31,12 +31,41 @@ class SignUpScreen extends StatelessWidget {
   }
 }
 
+Widget textAndButton = Container(
+  child: Column(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: [
+      buttonexample,
+      textSection,
+    ],
+  ),
+);
+
+Widget textSection = Container(
+  padding: const EdgeInsets.all(32),
+  child: Text(
+    'Hello there',
+    softWrap: true,),
+);
+
+Widget buttonexample = Container(
+  padding: const EdgeInsets.all(32),
+  child: MaterialButton(
+    color: Colors.blue,
+    child: Text('New button'),
+    onPressed: () {
+      //Do something
+    },
+  )
+);
+
+
 class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('Welcome 20210110_textfield! 2', style: Theme.of(context).textTheme.headline2),
+        child: textAndButton//Text('Welcome 20210110_textfield! 2', style: Theme.of(context).textTheme.headline2),
       ),
     );
   }
