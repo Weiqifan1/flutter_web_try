@@ -25,6 +25,10 @@ Flutter Web - Building a Responsive Website in Flutter | Flutter Tutorial
 RetroPortal Studio
 https://www.youtube.com/watch?v=rpkKYQCioW0
 
+simpelt Bloc for web eksempel (accent)
+Flutter Web Development : Bloc Pattern | Movie Database | Pt-1
+https://www.youtube.com/watch?v=f6zenFWRoEc
+
 speedcoding, ingen tale, complex visuel app, har liste, ingen underliggende funktionalitet:
 Flutter Web App Development | Static Web App | Part - 1 | Speed Code | Progressive Web App
  Am I Worthy
