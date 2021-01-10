@@ -14,6 +14,10 @@ enekl gennemgang for web, men uden de komponenter jeg skal bruge (men viser hove
 https://blog.codemagic.io/flutter-web-getting-started-with-responsive-design/
 
 
+-*-stackoverflow:
+https://stackoverflow.com/questions/59663377/how-to-save-and-download-text-file-in-flutter-web-application
+
+
 
 -*- youtube tutorials
 god til atstarte med (nav bar, og knap uden funktion):
