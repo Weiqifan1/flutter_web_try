@@ -4,6 +4,10 @@
 tutorials:
 -*- non youtube:
 
+godt eksempel paa brug af bloc til statemanagement>
+https://bloclibrary.dev/#/fluttercountertutorial
+https://github.com/felangel/bloc/tree/master/examples/flutter_counter/lib/counter
+
 officiel men mest for mobile.
 https://flutter.dev/docs/reference/tutorials
 
