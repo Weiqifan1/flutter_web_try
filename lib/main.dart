@@ -1,3 +1,17 @@
+import 'package:bloc/bloc.dart';
+import 'package:flutter/material.dart';
+
+import 'CounterApp.dart';
+//import 'app.dart';
+import 'counter_observer.dart';
+
+void main() {
+  Bloc.observer = CounterObserver();
+  runApp(const CounterApp());
+}
+
+
+/*
 import 'package:flutter/material.dart';
 
 void main() => runApp(SignUpApp());
@@ -44,7 +58,7 @@ Widget textAndButton = Container(
 Widget textSection = Container(
   padding: const EdgeInsets.all(32),
   child: Text(
-    'Hello there',
+    'Hello there lykke',
     softWrap: true,),
 );
 
@@ -136,3 +150,4 @@ class _SignUpFormState extends State<SignUpForm> {
     );
   }
 }
+*/
