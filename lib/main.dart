@@ -1,8 +1,10 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 
-import 'CounterApp.dart';
-//import 'app.dart';
+import 'package:bloc/bloc.dart';
+import 'package:flutter/material.dart';
+
+import 'app.dart';
 import 'counter_observer.dart';
 
 void main() {
