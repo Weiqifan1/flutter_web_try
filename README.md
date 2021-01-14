@@ -1,5 +1,6 @@
 # flutter_web_try
- based on samplecode from https://flutter.dev/docs/get-started/codelab-web
+ first version was based on samplecode from https://flutter.dev/docs/get-started/codelab-web
+2021-01-14: based on https://bloclibrary.dev/#/fluttercountertutorial
 
 tutorials:
 -*- non youtube:
