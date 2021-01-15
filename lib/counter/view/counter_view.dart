@@ -9,7 +9,7 @@ import '../counter.dart';
   //dette vil ikke virke. jeg maa laese teksten om layout igen
 //}
 
-const centerText = Text('her er text');
+const centerText = Text('her er text 2');
 
 /// {@template counter_view}
 /// A [StatelessWidget] which reacts to the provided

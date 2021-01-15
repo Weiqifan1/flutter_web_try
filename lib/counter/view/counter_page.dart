@@ -8,9 +8,9 @@ import 'counter_view.dart';
 /// A [StatelessWidget] which is responsible for providing a
 /// [CounterCubit] instance to the [CounterView].
 /// {@endtemplate}
-class MainPage extends StatelessWidget {
+class CounterPage extends StatelessWidget {
   /// {@macro counter_page}
-  const MainPage({Key key}) : super(key: key);
+  const CounterPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
