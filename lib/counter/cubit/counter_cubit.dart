@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter_web_try/businessLogic/flutterIO.dart';
 
 /// {@template counter_cubit}
 /// A [Cubit] which manages an [int] as its state.
@@ -6,6 +7,7 @@ import 'package:bloc/bloc.dart';
 class CounterCubit extends Cubit<String> {
   /// {@macro counter_cubit}
   CounterCubit() : super("");
+  flutterIO flutterio = new flutterIO('userinput');
 
   String currentUserInputState = "";
   String currentInputFilePath = "";
@@ -34,6 +36,7 @@ class CounterCubit extends Cubit<String> {
 
   void setUserInputFileContent(String input){
     userInputFileContent = input;
+    setUserOutputFileContent(input);
   }
   String getUserInputFileContent(){
     return userInputFileContent;
@@ -43,13 +46,21 @@ class CounterCubit extends Cubit<String> {
   }
 
   void setUserOutputFileContent(String input){
-    userOutputFileContent = input;
+    //userOutputFileContent = input;
+    flutterio.setIOFileInput(input);
   }
   String getUserOutputFileContent(){
-    return userOutputFileContent;
+    //return userOutputFileContent;
+    var result = flutterio.getResult();
+    userOutputFileContent = result;
+    return result;
   }
   void displayUserOutputFileContent(){
-    emit(userOutputFileContent);
+    if (userOutputFileContent.length > 25) {
+      emit(userOutputFileContent.substring(0, 20) + '...ect');
+    }else {
+      emit(userOutputFileContent);
+    }
   }
 
 
