@@ -43,12 +43,23 @@ class CounterView extends StatelessWidget {
           ),
           FloatingActionButton(
             key: const Key('counterView_increment_floatingActionButton'),
-            child: const Icon(Icons.add),
+            child: const Text('readTextfield'),//Icon(Icons.add),
             onPressed: () {
               String textField = emailController.text;
               context.read<CounterCubit>().setCurrentState(textField);
               context.read<CounterCubit>().displayCurrentState();
             }//=> context.read<CounterCubit>().increment(),
+          ),
+          FloatingActionButton(
+            key: const Key('counterView_readFile_floatingActionButton'),
+            child: const Text('readFile'),
+            onPressed: () => context.read<CounterCubit>().decrement(),
+          ),
+
+          FloatingActionButton(
+            key: const Key('counterView_downloadFile_floatingActionButton'),
+            child: const Text('downlaodFile'),
+            onPressed: () => context.read<CounterCubit>().decrement(),
           ),
         ],
       ),
