@@ -2,6 +2,9 @@
  first version was based on samplecode from https://flutter.dev/docs/get-started/codelab-web
 2021-01-14: based on https://bloclibrary.dev/#/fluttercountertutorial
 
+read and write to file (download):
+https://stackoverflow.com/questions/57182634/to-read-and-write-file-in-flutter-web
+
 tutorials:
 -*- non youtube:
 
