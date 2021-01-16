@@ -28,7 +28,7 @@ class CounterView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: <Widget>[
-          BlocBuilder<CounterCubit, int>(
+          BlocBuilder<CounterCubit, String>(
             builder: (context, state) {
               return Text('$state', style: textTheme.headline2);
             },
