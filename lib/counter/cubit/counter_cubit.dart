@@ -15,18 +15,18 @@ class CounterCubit extends Cubit<String> {
 }
 
 class chrCubitHelper {
-  String inputState = '';
 
   chrCubitHelper();
 
   String makeBigger(String input){
-    String result = input + 'a';
+    String result = input + 'ab';
     return result;
   }
 
   String makeSmaller(String input){
     if (input.length > 3) {
-      return input.substring(0, input.length-1);
+      String result = input.substring(0, input.length-1);
+      return result;
     }else {
       return input;
     }
