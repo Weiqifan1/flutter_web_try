@@ -1,6 +1,8 @@
 
+import 'cedictService.dart';
+
 String generateCeddictObject(String input) {
-  return 'cedictObj: ' + input;
+  return 'cedictObj: ' + returnFinishedMapResult(input);
 }
 
 /// takes a string that might consist of an entry in cedict.
