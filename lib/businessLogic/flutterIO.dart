@@ -4,6 +4,8 @@
 //like libraries for text-to-speech handling ect
 // (the class should handle calls to another class named for example "ttsIO")
 
+import 'businessController.dart';
+
 class flutterIO {
 
   String ioFileInput;
@@ -11,11 +13,20 @@ class flutterIO {
   flutterIO(this.ioFileInput);
 
   String getResult(){
-    return 'result: ' + ioFileInput;
+    return 'result: ' + getAnkiCSVconstructFromFile(ioFileInput);
   }
 
   void setIOFileInput(String input){
-    ioFileInput = input;
+    if (invalidFileDataFormatFrontend(input)) {
+      ioFileInput = 'error: bad file input';
+    }else {
+      ioFileInput = input;
+    }
+  }
+
+
+  bool invalidFileDataFormatFrontend(String input) {
+    return false;
   }
 
 }
