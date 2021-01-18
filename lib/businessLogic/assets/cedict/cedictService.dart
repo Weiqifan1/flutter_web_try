@@ -13,37 +13,53 @@ import 'dart:convert';
 
 String returnFinishedMapResult(String input){
 
-  HashMap cedict = HashMap<String, String>();
-  cedict['chr'] = 'Lykke';
-  cedict['smutvej'] = 'strandgaarden';
+  HashMap cedict = HashMap<String, CedictEntry>();
+  cedict['chr'] = CedictEntry('chr', 'is my name');
+  cedict['smutvej'] = CedictEntry('smutvej', 'is my home');
 
 
-  User myUser = User('chr', 'chrEmail');
+  CedictEntry myUser = CedictEntry('chr', 'chrEmail');
   var jsonUser  = jsonEncode(myUser);
-
-
   Map userMap = jsonDecode(jsonUser);
-  var finaluser = User.fromJson(userMap);
+  var finaluser = CedictEntry.fromJson(userMap);
 
-  return finaluser.name;
+  CedictMap mymap = CedictMap(cedict);
+  var jsonmap  = jsonEncode(mymap);
+  Map cedictmap = jsonDecode(jsonmap);
+  //var finalcedict = CedictMap.fromJson(cedictmap);
+
+  return finaluser.key;
 }
 
 
+class CedictMap {
+  final HashMap<String, CedictEntry> cedict;
 
-class User {
-  final String name;
-  final String email;
+  CedictMap(this.cedict);
 
-  User(this.name, this.email);
-
-  User.fromJson(Map<String, dynamic> json)
-      : name = json['name'],
-        email = json['email'];
+  CedictMap.fromJson(Map<String, dynamic> json)
+      : cedict = json['cedict'];
 
   Map<String, dynamic> toJson() =>
       {
-        'name': name,
-        'email': email,
+        'cedict': cedict,
+      };
+}
+
+class CedictEntry {
+  final String key;
+  final String meaning;
+
+  CedictEntry(this.key, this.meaning);
+
+  CedictEntry.fromJson(Map<String, dynamic> json)
+      : key = json['key'],
+        meaning = json['meaning'];
+
+  Map<String, dynamic> toJson() =>
+      {
+        'key': key,
+        'meaning': meaning,
       };
 }
 
