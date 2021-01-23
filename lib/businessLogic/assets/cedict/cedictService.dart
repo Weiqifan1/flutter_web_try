@@ -21,8 +21,8 @@ Future<String> asyncGetRawCedict(String input) {
 
 //sync functions
 
-String cedictToJson(String input){
-  return input + "hello";
+String cedictToJson(String rawCedictContent){
+  return rawCedictContent + "hello";
 }
 
 
