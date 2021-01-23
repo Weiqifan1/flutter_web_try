@@ -6,14 +6,16 @@ import 'assets/cedict/cedictController.dart';
 
 String getCedictObject(String input){
   String cedictControllerOutput = generateCeddictObject(input);
-  return 'handleCedict: ' + cedictControllerOutput;
+  print("businessController (getCedictObject)");
+  return cedictControllerOutput;
 }
 
 String getAnkiCSVconstructFromFile(String input){
   if (invalidFileDataFormatBackend(input)) {
     return 'error: bad file data format';
   }else {
-    return 'AnkiCSVConstruct: ' + getCedictObject(input);
+    print("businessController (getAnkiCSVconstructFromFile)");
+    return getCedictObject(input);
   }
 }
 
