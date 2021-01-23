@@ -93,12 +93,24 @@ class CounterView extends StatelessWidget {
             key: const Key('counterView_downloadFile_floatingActionButton'),
             child: const Text('downlaodFile'),
             onPressed: () {
+
+              Future<String> output = context.read<CounterCubit>().getUserOutputFileContent();
+              output.then((val) {
+                var blob = webFile.Blob([val], 'text/plain', 'native');
+                var anchorElement = webFile.AnchorElement(
+                  href: webFile.Url.createObjectUrlFromBlob(blob).toString(),
+                )..setAttribute("download", "data.txt")..click();
+                context.read<CounterCubit>().displayUserOutputFileContent();
+              });
+              /*
               String output = context.read<CounterCubit>().getUserOutputFileContent();
               var blob = webFile.Blob([output], 'text/plain', 'native');
               var anchorElement = webFile.AnchorElement(
                 href: webFile.Url.createObjectUrlFromBlob(blob).toString(),
               )..setAttribute("download", "data.txt")..click();
               context.read<CounterCubit>().displayUserOutputFileContent();
+
+               */
             }//=> context.read<CounterCubit>().decrement(),
           ),
         ],

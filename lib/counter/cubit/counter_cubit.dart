@@ -49,12 +49,13 @@ class CounterCubit extends Cubit<String> {
     //userOutputFileContent = input;
     flutterio.setIOFileInput(input);
   }
-  String getUserOutputFileContent(){
+  Future<String> getUserOutputFileContent(){
     //return userOutputFileContent;
+    userOutputFileContent = "resultIsAsyncAndCannotBeShown";
     var result = flutterio.getResult();
-    userOutputFileContent = result;
     return result;
   }
+
   void displayUserOutputFileContent(){
     if (userOutputFileContent.length > 25) {
       emit(userOutputFileContent.substring(0, 20) + '...ect');

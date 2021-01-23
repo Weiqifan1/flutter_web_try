@@ -12,7 +12,7 @@ class flutterIO {
 
   flutterIO(this.ioFileInput);
 
-  String getResult(){
+  Future<String> getResult(){
     print("flutterIO (getResult())");
     return getAnkiCSVconstructFromFile(ioFileInput);
   }
