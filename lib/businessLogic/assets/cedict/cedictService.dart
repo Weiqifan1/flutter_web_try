@@ -5,10 +5,24 @@
 
 //sync functions
 
+import 'dart:convert';
+
 class CedictService {
   String cedictToJson(String rawCedictContent){
-    return rawCedictContent + "hello";
+    //return rawCedictContent + "hello";
+
+    return "hello";
+
   }
+
+  List<String> cedictRawTOList(String rawCedictContent){
+
+    LineSplitter ls = new LineSplitter();
+    List<String> lines = ls.convert(rawCedictContent);
+    return lines;
+  }
+
+
 }
 
 
