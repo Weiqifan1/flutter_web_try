@@ -1,9 +1,12 @@
 
 import 'cedictService.dart';
+import 'cedictFileGenerator.dart';
 
 Future<String> generateCeddictObject(String input) {
   print("cedictController (generateCeddictObject)");
-  return asyncGetRawCedict(input);
+
+  var cedictFileGenerator = new CedictFileGenerator();
+  return cedictFileGenerator.asyncGetRawCedict(input);
 }
 
 /// takes a string that might consist of an entry in cedict.

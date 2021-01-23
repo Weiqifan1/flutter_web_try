@@ -24,6 +24,7 @@ Future<String> getErrorString(String input){
 
 Future<String> getAnkiCSVconstructFromFile(String input){
   Future<String> result;
+  var cedictService = new CedictService();
 
   if (invalidFileDataFormatBackend(input)) {
     result = getErrorString('error: bad file data format');// as Future<String>;
@@ -33,7 +34,7 @@ Future<String> getAnkiCSVconstructFromFile(String input){
     result = getCedictObject(input);
   }
 
-  result = result.then((cedictContent) => cedictToJson(cedictContent));
+  result = result.then((cedictContent) => cedictService.cedictToJson(cedictContent));
 
   return result;
 }
